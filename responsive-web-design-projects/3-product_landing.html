@@ -3,13 +3,345 @@
 <head>
   <title>FCC: Product Landing Page</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <style>
 
+  @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  body {
+    padding-top: 50px;
+    background-color: #ededed;
+    font-family: 'Lato', sans-serif;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .btn {
+    padding: 0 20px;
+    height: 40px;
+    font-size: 1em;
+    font-weight: 900;
+    text-transform: uppercase;
+    border: 3px black solid;
+    border-radius: 2px;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: orange;
+    transition: background-color 1s;
+  }
+
+  #header {
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #ededed;
+  }
+
+  .nav-logo {
+    float: left;
+    width: 300px;
+    padding: 10px 20px;
+  }
+
+  #nav-bar {
+    float: right;
+    padding: 10px 20px;
+    font-weight: 400;
+  }
+
+  .nav-list {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 10px 30px;
+    font-size: 1.2em;
+  }
+
+  .main-div {
+    width: 70%;
+    margin: 0px auto;
+    padding-top: 50px;
+  }
+
+  #hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #form {
+    padding-top: 10px;
+  }
+
+  .main-form h1 {
+    font-size: 1.8em;
+  }
+
+  #email {
+    min-width: 250px;
+    padding: 5px;
+  }
+
+  #submit {
+    max-width: 150px;
+    width: 100%;
+    height: 30px;
+    margin: 15px 0;
+    border: 0;
+    background-color: #f1c40f;
+    cursor: pointer;
+  }
+
+  #submit:hover {
+    background-color: orange;
+    transition: background-color 1s;
+  }
+
+  .grid {
+    display: flex;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    width: 20%;
+    color: darkorange;
+  }
+
+  .content {
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 125px;
+    width: 80%;
+    padding: 5px;
+  }
+
+  #how-it-works {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #how-it-works iframe {
+    max-width: 560px;
+    width: 100%;
+  }
+
+  #pricing {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .card {
+    width: 33%;
+    border: 1px solid black;
+    margin: 5px 10px;
+  }
+
+  .card-head {
+    background-color: #DCDCDC;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .card-desc {
+    background-color: #EDEDED;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .card-desc li {
+    padding-top: 10px;
+  }
+
+ .submit-btn {
+    border: 0;
+    margin: 25px 0;
+    background-color: #f1c40f;
+    font-weight: 400;
+  }
+
+
+@media screen and (max-width: 600px) {
+  #pricing {
+    flex-direction: column;
+  }
+
+  .card {
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+#footer {
+  margin-top: 50px;
+  background-color: #DCDCDC;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+
+.footer-content {
+  width: 300px;
+  margin-left: auto;
+}
+
+.footer-content ol {
+  float: right;
+  display: flex;
+}
+
+.footer-content li {
+  padding: 5px 10px;
+}
+
 </style>
 <body>
-  <div>
-
+  <div class="main">
+    <header id="header">
+    <div class="nav-logo">
+      <a href="#"><img src="https://s3.amazonaws.com/freecodecamp/original_trombones.png" id="header-img" width="100%"></a>
+    </div>
+    <nav id="nav-bar">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="#features">Features</a></li>
+        <li><a class="nav-link" href="#how-it-works">How it Works</a></li>
+        <li><a class="nav-link" href="#pricing">Pricing</a></li>
+      </ul>
+    </nav>
+    </header>
+    <div class="main-div">
+      <section id="hero">
+        <div class="main-form">
+          <h1>Handcrafted, home-made masterpieces</h1`>
+        </div>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <input required id="email" type="email" name="email" placeholder="Enter a valid Email">
+          <br>
+          <input id="submit" class="btn" type="submit"  name="submit" value="GET STARTED">
+        </form>
+      </section>
+      <div id="features">
+        <div class="grid">
+          <div class="icon">
+            <i class="fa fa-3x fa-fire"></i>
+          </div>
+          <div class="content">
+            <h2>Premium Materials</h2>
+            <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="icon">
+            <i class="fa fa-3x fa-truck"></i>
+          </div>
+          <div class="content">
+            <h2>Fast Shipping</h2>
+            <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="icon">
+            <i class="fa fa-3x fa-battery-full"></i>
+          </div>
+          <div class="content">
+            <h2>Quality Assurance</h2>
+            <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
+          </div>
+        </div>
+      </div>
+      <div id="how-it-works">
+        <iframe id="video" height="315" src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+      </div>
+      <div id="pricing">
+        <div class="card">
+          <div class="card-head">
+            <h3>TENOR TROMBONE</h3>
+          </div>
+          <div class="card-desc">
+            <h2>$600</h2>
+            <ol>
+              <li>Lorem ipsum.</li>
+              <li>Lorem ipsum.</li>
+              <li>Lorem ipsum dolor.</li>
+              <li>Lorem ipsum.</li>
+            </ol>
+            <button class="submit-btn btn">SUBMIT</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-head">
+            <h3>BASS TROMBONE</h3>
+          </div>
+          <div class="card-desc">
+            <h2>$900</h2>
+            <ol>
+              <li>Lorem ipsum.</li>
+              <li>Lorem ipsum.</li>
+              <li>Lorem ipsum dolor.</li>
+              <li>Lorem ipsum.</li>
+            </ol>
+            <button class="submit-btn btn">SUBMIT</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-head">
+            <h3>VALVE TROMBONE</h3>
+          </div>
+          <div class="card-desc">
+            <h2>$1200</h2>
+            <ol>
+              <li>Plays similar to a Trumpet</li>
+              <li>Great for Jazz Bands</li>
+              <li>Lorem ipsum dolor.</li>
+              <li>Lorem ipsum.</li>
+            </ol>
+            <button class="submit-btn btn">SUBMIT</button>
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+        <div class="footer-content">
+          <ol>
+            <li>Privacy</li>
+            <li>Terms</li>
+            <li>Contact</li>
+          </ol>
+          <div>
+            <p>Copyright 2016, Original Trombones</p>
+          </div>
+        </div>
+      </footer>
+    </div>
   </div>
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
