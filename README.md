@@ -14,11 +14,11 @@ This repository consist of all the FreeCodeCamp Projects.
 
 ### 5. Build a Personal Portfolio Webpage. ([click here to view](https://github.com/rishavpandey43/FreeCodeCamp-Projects/tree/master/01-responsive-web-design-projects/5-Personal-Portfolio-Webpage))
 
-<!-- ## 02-JavaScript Algorithms and Data Structures Projects
+## 02-JavaScript Algorithms and Data Structures Projects
 
-### 1.Palindrome Checker. ([click here to view]())
+### 1.Palindrome Checker. ([click here to view](https://github.com/rishavpandey43/FreeCodeCamp-Projects/tree/master/02-javaScript-algorithms-and-data-structures-projects/1-palindrome-checker)
 
-### 2.Roman Numeral Converter. ([click here to view]())
+<!-- ### 2.Roman Numeral Converter. ([click here to view]())
 
 ### 3.Caesars Cipher. ([click here to view]())
 
